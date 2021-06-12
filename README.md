@@ -9,6 +9,14 @@ If Ctrl+Alt+g doesn't work, use Ctrl+Shift+p and type Google Meet
 ![Demo](demo.gif) / ! [](demo.gif)
 
 
-### 1.0.0
+### 0.0.1
 
 Initial release of Google Meet
+
+### 0.1.0
+
+Icon update
+
+### 0.1.1
+
+Description Update

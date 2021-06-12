@@ -1,4 +1,4 @@
-# Google Meet README
+# Google Meet VS Code Extension
 
 This VS Code Extension allows you to start a new Google Meet directly from VS Code by pressing Ctrl+Alt+g.
 

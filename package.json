@@ -4,8 +4,13 @@
 	"description": "Start a new Google Meet from VS Code",
 	"publisher":"geekanant",
 	"version": "0.0.1",
+	"icon": "icon.png",
 	"engines": {
 		"vscode": "^1.55.0"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/geekanant/Google-Meet-VS-Code-Extension"
 	},
 	"categories": [
 		"Other"

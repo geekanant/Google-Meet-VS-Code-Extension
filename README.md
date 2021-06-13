@@ -28,3 +28,7 @@ Add support for VS Code version > 1.0.0
 ### 0.1.3
 
 Add Icon to Activity Bar
+
+### 0.1.6
+
+Fix CSS not loading on compilation

@@ -31,7 +31,51 @@ export function activate(context: vscode.ExtensionContext) {
   );
 
   context.subscriptions.push(disposable);
+  const provider = new GoogleMeetView(context.extensionUri);
+
+  context.subscriptions.push(
+    vscode.window.registerWebviewViewProvider(GoogleMeetView.viewType, provider)
+  );
 }
 
-// this method is called when your extension is deactivated
-export function deactivate() {}
+class GoogleMeetView implements vscode.WebviewViewProvider {
+  public static readonly viewType = "meet.meetView";
+  constructor(private readonly _extensionUri: vscode.Uri) {}
+
+  public resolveWebviewView(
+    webviewView: vscode.WebviewView,
+    context: vscode.WebviewViewResolveContext,
+    _token: vscode.CancellationToken
+  ) {
+    webviewView.webview.options = {
+      enableScripts: true,
+      localResourceRoots: [this._extensionUri],
+    };
+    webviewView.webview.html = this._getHtmlForWebview(webviewView.webview);
+  }
+
+  private _getHtmlForWebview(webview: vscode.Webview) {
+    const styleMainUri = webview.asWebviewUri(
+      vscode.Uri.joinPath(this._extensionUri, "src", "extension.css")
+    );
+
+    return `<!DOCTYPE html>
+			<html lang="en">
+			<head>
+				<meta charset="UTF-8">
+
+				<meta
+          http-equiv="Content-Security-Policy"
+          content="default-src 'none'; img-src ${webview.cspSource} https:; script-src ${webview.cspSource}; style-src ${webview.cspSource};"
+        />
+
+				<meta name="viewport" content="width=device-width, initial-scale=1.0">
+				<link href="${styleMainUri}" rel="stylesheet">
+				<title>Google Meet</title>
+			</head>
+			<body>
+				<a class="meet-link" href="https://meet.google.com/new?hs=180&authuser=0"><button  class="add-color-button">Start New Google Meet</button></a>
+			</body>
+			</html>`;
+  }
+}

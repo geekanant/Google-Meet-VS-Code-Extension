@@ -1,0 +1,12 @@
+.add-color-button {
+  display: block;
+  background-color: #0e639c;
+  color: #e8f5f8;
+  height: 25px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.meet-link {
+  text-decoration: none;
+}

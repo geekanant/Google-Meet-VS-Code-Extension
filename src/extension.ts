@@ -56,7 +56,7 @@ class GoogleMeetView implements vscode.WebviewViewProvider {
 
   private _getHtmlForWebview(webview: vscode.Webview) {
     const styleMainUri = webview.asWebviewUri(
-      vscode.Uri.joinPath(this._extensionUri, "src", "extension.css")
+      vscode.Uri.joinPath(this._extensionUri, "media", "main.css")
     );
 
     return `<!DOCTYPE html>

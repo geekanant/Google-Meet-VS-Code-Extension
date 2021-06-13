@@ -1,9 +1,17 @@
 # Change Log
 
-All notable changes to the "a" extension will be documented in this file.
+### 0.0.1
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
+Initial release of Google Meet
 
-## [Unreleased]
+### 0.1.0
 
-- Initial release
+Icon update
+
+### 0.1.1
+
+Description Update
+
+### 0.1.2
+
+Add support for VS Code version > 1.0.0

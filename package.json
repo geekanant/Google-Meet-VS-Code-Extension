@@ -3,7 +3,7 @@
   "displayName": "Google Meet",
   "description": "Start a new Google Meet directly from VS Code",
   "publisher": "geekanant",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "icon": "icon.png",
   "engines": {
     "vscode": "^1.0.0"
